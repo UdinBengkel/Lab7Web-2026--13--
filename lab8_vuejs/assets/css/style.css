@@ -1,0 +1,274 @@
+#app {
+    margin: 0 auto;
+    width: 900px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 20px 0;
+}
+
+h1 {
+    color: #1e3a5f;
+    margin-bottom: 15px;
+}
+
+table {
+    min-width: 700px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 10px;
+    background: #5778ff;
+    color: #ffffff;
+    text-align: left;
+}
+
+tr td {
+    border-bottom: 1px solid #eff1ff;
+}
+
+tr:nth-child(odd) {
+    background-color: #eff1ff;
+}
+
+td {
+    padding: 10px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+td a {
+    margin: 5px;
+    color: #3152d6;
+    text-decoration: none;
+}
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Modal */
+#form-data { width: 600px; }
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form div { margin-bottom: 5px; }
+
+form button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+#btn-tambah {
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #3152d6;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+}
+
+#btnSimpan {
+    background-color: #3152d6;
+    color: #ffffff;
+}
+
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 600px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover { color: #333; }
+
+/* ── Tambahan untuk SPA (Praktikum 12) ── */
+
+header {
+    background: #1e3a5f;
+    color: #fff;
+    padding: 15px 20px;
+}
+header h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 0;
+    align-items: center;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: #ccc;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.nav-menu a:hover {
+    background: #2c5282;
+    color: #fff;
+}
+
+/* Kelas otomatis dari Vue Router untuk link yang sedang aktif */
+.router-link-exact-active {
+    background-color: #2c5282 !important;
+    color: #ffffff !important;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.home-container {
+    padding: 20px;
+    border: 1px solid #eff1ff;
+    background: #fafafa;
+    border-radius: 6px;
+}
+.home-container h2 {
+    color: #1e3a5f;
+    margin-bottom: 10px;
+}
+
+/* ── Tambahan untuk About (Tugas P12) ── */
+
+.about-container {
+    max-width: 450px;
+    padding: 25px;
+    background: #fff;
+    border: 1px solid #eff1ff;
+    border-radius: 8px;
+}
+.about-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #2c5282;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.about-container h2 {
+    color: #1e3a5f;
+    margin-bottom: 15px;
+}
+.about-table td {
+    padding: 6px 10px;
+    font-size: 14px;
+    border: none;
+}
+.about-table tr:nth-child(odd) {
+    background: #f8f9ff;
+}
+
+/* ── Tambahan CSS Login (Praktikum 13) ── */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.login-box {
+    width: 360px;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1e3a5f;
+    font-size: 18px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 11px;
+    background: #2c5282;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.btn-login:hover { background: #1e3a5f; }
+.btn-login:disabled { background: #999; cursor: not-allowed; }
+
+.error-msg {
+    color: #c0392b;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 12px;
+}

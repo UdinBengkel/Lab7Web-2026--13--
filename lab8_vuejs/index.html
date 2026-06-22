@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secured SPA Frontend VueJS</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4/dist/vue-router.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div id="app">
+        <header>
+            <h1>Aplikasi Panel SPA — Secured</h1>
+            <nav class="nav-menu">
+                <router-link to="/">Beranda</router-link> |
+
+                <!-- Hanya muncul jika sudah login -->
+                <router-link v-if="isLoggedIn" to="/artikel">Kelola Artikel</router-link>
+                <span v-if="isLoggedIn"> | </span>
+                <router-link v-if="isLoggedIn" to="/about">Profil</router-link>
+                <span v-if="isLoggedIn"> | </span>
+
+                <!-- Tampilkan nama user jika sudah login -->
+                <span v-if="isLoggedIn"
+                      style="color:#ffd700; font-size:13px; margin-right:8px;">
+                    👤 {{ userName }}
+                </span>
+
+                <!-- Tombol Login/Logout bergantian -->
+                <router-link v-if="!isLoggedIn" to="/login">Login</router-link>
+                <a v-else href="#" @click.prevent="logout">Logout</a>
+            </nav>
+        </header>
+
+        <main style="margin-top: 20px;">
+            <router-view></router-view>
+        </main>
+    </div>
+
+    <!-- Urutan load PENTING: komponen dulu, baru app.js -->
+    <script src="assets/js/components/Home.js"></script>
+    <script src="assets/js/components/Artikel.js"></script>
+    <script src="assets/js/components/About.js"></script>
+    <script src="assets/js/components/Login.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
